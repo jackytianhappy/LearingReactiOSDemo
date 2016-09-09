@@ -15,14 +15,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.redColor()
         
-        self.view .addSubview(tableView); 
+        self.view .addSubview(tableView);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 //MARK: tableview datasource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
