@@ -1,0 +1,12 @@
+1.交互上体验上的加强，详情类如下：...........（使用case 较少）
+2.可以在peek和pop的时候调用文档里的方法添加用户界面（使用case较少）
+3.提供新接口调语音，提供纠正文字错误等功能（使用case较少）
+4.通过这两个类决定是否开启AssistiveTouch（这个还不错），通过这两个类监听MFI认证的设备（其实就是耳机），（不常用不常用）
+5.提供新的借口给粘贴面板（不常用）
+6.通过 preferredFontForTextStyle:compatibleWithTraitCollection: UIFont这个代理方法为文本类提供动态类型的更改
+7.通过UIContentSizeCategoryAdjusting这个代理方法的adjustsFontForContentSizeCategory属性，决定根据设备的UIContentSizeCategory决定字体适应
+8.为tabbar上的bage提供用户自定义属性，背景，字体属性
+9.Scrollview子类的增强（个人觉得这个非常管用，性能大大提升，不需要通过重绘进行重新渲染界面了）
+10.openURl异步请求，之后进行回调（这个比较重要啊！！！！！）
+11.CLoudKit的更改，新增类和协议（使用case较少）
+12. UICollectionView 新增UICollectionViewDataSourcePrefetching代理，提前拿取cell，并且提升滑动体验（性能类改进，不影响功能）
