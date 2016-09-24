@@ -27,8 +27,9 @@
     self.webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     self.webView.delegate = self;
     [self.view addSubview:self.webView];
+    NSURL *url = [NSURL URLWithString:@"http://home.focus.cn/decoration/works/53654a751f7ce9b57dffc66628029c73.html?anchorId=designList.1.0"];
     
-    NSURL *url = [NSURL URLWithString:@"http://focus.com.cn/"];
+//    NSURL *url = [NSURL URLWithString:@"http://focus.com.cn/"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
     
 }
@@ -37,13 +38,20 @@
 }
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     
-    NSString *js = @"function show(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML != 'wx.'){ return 123;}}}";
+    //可以争正确执行的js
+//    NSString *js = @"function show(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML == 'wx'){ return 123;}}}";
+
+    //可以正确却道wxconfig值
+//    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      return arr[i].innerHTML;}}}";
+    
+    
+    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      return arr[i].innerHTML;}}}";
     
     [context evaluateScript:js];
     
     JSValue *n = [context[@"show"] callWithArguments:@[@1]];
     
-    NSLog(@"---%@", [n toString]);//---5
+    NSLog(@"---%@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", [n toString]);//---5
     
   
 }
