@@ -44,12 +44,21 @@
     //可以正确却道wxconfig值
 //    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      return arr[i].innerHTML;}}}";
     
+    //可以正确获取title
+//    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      var totalstring = arr[i].innerHTML;  var startIndex = totalstring.indexOf('title'); var endIndex = totalstring.indexOf('link');    return totalstring.substring(startIndex+8,endIndex); }}}";
+
+    //百分之百正确获取title  正确获取title ＊＊＊＊＊＊＊＊
+//    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      var totalstring = arr[i].innerHTML;  var startIndex = totalstring.indexOf('title'); var endIndex = totalstring.indexOf('link');   var tmpStr = totalstring.substring(startIndex+8,endIndex);     var finalEndIndex = tmpStr.indexOf(','); return tmpStr.substring(0,finalEndIndex-1);  }}}";
+
+    //百分之百获取link  正确link ＊＊＊＊＊＊＊＊＊＊＊＊
+//    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      var totalstring = arr[i].innerHTML;  var startIndex = totalstring.indexOf('imgUrl'); var endIndex = totalstring.indexOf('success');   var tmpStr = totalstring.substring(startIndex+9,endIndex);     var finalEndIndex = tmpStr.indexOf(','); return tmpStr.substring(0,finalEndIndex-1);  }}}";
     
-    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      return arr[i].innerHTML;}}}";
+    //百分之百获取 desc 正确
+    NSString *js = @"function shoTitle(a) {var arr = document.getElementsByTagName('script'); for(var i in arr){if(arr[i].innerHTML.indexOf('wx.onMenuShareAppMessage') > 0){                      var totalstring = arr[i].innerHTML;  var startIndex = totalstring.indexOf('desc:'); var endIndex = totalstring.length;  var tmpStr = totalstring.substring(startIndex,endIndex);  var finalEndIndex =tmpStr.indexOf('link');    var finalTmpStr = tmpStr.substring(8,finalEndIndex);    var lasEndIndex = finalTmpStr.indexOf(','); return finalTmpStr.substring(0,lasEndIndex-1);  }}}";
     
     [context evaluateScript:js];
     
-    JSValue *n = [context[@"show"] callWithArguments:@[@1]];
+    JSValue *n = [context[@"shoTitle"] callWithArguments:@[@1]];
     
     NSLog(@"---%@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", [n toString]);//---5
     
