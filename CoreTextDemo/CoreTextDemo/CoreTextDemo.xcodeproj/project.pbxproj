@@ -15,6 +15,7 @@
 		8525DC191DC0B7B80037BC0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8525DC171DC0B7B80037BC0B /* LaunchScreen.storyboard */; };
 		8525DC241DC0B7B80037BC0B /* CoreTextDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8525DC231DC0B7B80037BC0B /* CoreTextDemoTests.m */; };
 		8525DC2F1DC0B7B80037BC0B /* CoreTextDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8525DC2E1DC0B7B80037BC0B /* CoreTextDemoUITests.m */; };
+		85C31AD41DC2F28900335262 /* CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C31AD31DC2F28900335262 /* CoreTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		8525DC2A1DC0B7B80037BC0B /* CoreTextDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTextDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8525DC2E1DC0B7B80037BC0B /* CoreTextDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextDemoUITests.m; sourceTree = "<group>"; };
 		8525DC301DC0B7B80037BC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85C31AD21DC2F28900335262 /* CoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextView.h; sourceTree = "<group>"; };
+		85C31AD31DC2F28900335262 /* CoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		8525DC081DC0B7B80037BC0B /* CoreTextDemo */ = {
 			isa = PBXGroup;
 			children = (
+				85C31AD11DC2EE6B00335262 /* CoreTextDemo */,
 				8525DC0C1DC0B7B80037BC0B /* AppDelegate.h */,
 				8525DC0D1DC0B7B80037BC0B /* AppDelegate.m */,
 				8525DC0F1DC0B7B80037BC0B /* ViewController.h */,
@@ -138,6 +142,15 @@
 				8525DC301DC0B7B80037BC0B /* Info.plist */,
 			);
 			path = CoreTextDemoUITests;
+			sourceTree = "<group>";
+		};
+		85C31AD11DC2EE6B00335262 /* CoreTextDemo */ = {
+			isa = PBXGroup;
+			children = (
+				85C31AD21DC2F28900335262 /* CoreTextView.h */,
+				85C31AD31DC2F28900335262 /* CoreTextView.m */,
+			);
+			name = CoreTextDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +291,7 @@
 			files = (
 				8525DC111DC0B7B80037BC0B /* ViewController.m in Sources */,
 				8525DC0E1DC0B7B80037BC0B /* AppDelegate.m in Sources */,
+				85C31AD41DC2F28900335262 /* CoreTextView.m in Sources */,
 				8525DC0B1DC0B7B80037BC0B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +528,7 @@
 				8525DC351DC0B7B80037BC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8525DC361DC0B7B80037BC0B /* Build configuration list for PBXNativeTarget "CoreTextDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +537,7 @@
 				8525DC381DC0B7B80037BC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8525DC391DC0B7B80037BC0B /* Build configuration list for PBXNativeTarget "CoreTextDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +546,7 @@
 				8525DC3B1DC0B7B80037BC0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
