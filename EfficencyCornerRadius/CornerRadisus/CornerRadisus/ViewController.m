@@ -23,6 +23,9 @@ static NSString *kCellName = @"testCell";
 
 @implementation ViewController
 
+//这边的方法基本没什么作用 想见Jkit中的对圆角的处理
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
