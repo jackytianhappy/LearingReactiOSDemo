@@ -16,6 +16,8 @@
 		85C552DA1DCDC88B00D7FF6C /* MVVMTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C552D91DCDC88B00D7FF6C /* MVVMTestUITests.m */; };
 		85C552EA1DCDD8B000D7FF6C /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C552E91DCDD8B000D7FF6C /* BaseVC.m */; };
 		85C552ED1DCDD8D300D7FF6C /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C552EC1DCDD8D300D7FF6C /* MainVC.m */; };
+		85DC0D101DCDE2BF0044EA0D /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D0F1DCDE2BF0044EA0D /* MainViewCell.m */; };
+		85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D131DCDE82C0044EA0D /* MainCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		85C552EB1DCDD8D300D7FF6C /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
 		85C552EC1DCDD8D300D7FF6C /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
 		85C552EF1DCDD96600D7FF6C /* Prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
+		85DC0D0E1DCDE2BF0044EA0D /* MainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewCell.h; sourceTree = "<group>"; };
+		85DC0D0F1DCDE2BF0044EA0D /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
+		85DC0D121DCDE82C0044EA0D /* MainCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCellModel.h; sourceTree = "<group>"; };
+		85DC0D131DCDE82C0044EA0D /* MainCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 		85C552B31DCDC88B00D7FF6C /* MVVMTest */ = {
 			isa = PBXGroup;
 			children = (
+				85DC0D111DCDE8040044EA0D /* Model */,
+				85DC0D0C1DCDDD450044EA0D /* viewModel */,
+				85DC0D0B1DCDDD2A0044EA0D /* view */,
 				85C552EE1DCDD92E00D7FF6C /* Config */,
 				85C552E71DCDD83B00D7FF6C /* Controller */,
 				85C552B71DCDC88B00D7FF6C /* SHAppDelegate.h */,
@@ -182,6 +191,31 @@
 				85C552EF1DCDD96600D7FF6C /* Prefix.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		85DC0D0B1DCDDD2A0044EA0D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				85DC0D0E1DCDE2BF0044EA0D /* MainViewCell.h */,
+				85DC0D0F1DCDE2BF0044EA0D /* MainViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		85DC0D0C1DCDDD450044EA0D /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		85DC0D111DCDE8040044EA0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85DC0D121DCDE82C0044EA0D /* MainCellModel.h */,
+				85DC0D131DCDE82C0044EA0D /* MainCellModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +406,9 @@
 			files = (
 				85C552B91DCDC88B00D7FF6C /* SHAppDelegate.m in Sources */,
 				85C552B61DCDC88B00D7FF6C /* main.m in Sources */,
+				85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */,
 				85C552ED1DCDD8D300D7FF6C /* MainVC.m in Sources */,
+				85DC0D101DCDE2BF0044EA0D /* MainViewCell.m in Sources */,
 				85C552EA1DCDD8B000D7FF6C /* BaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,36 +1,22 @@
 //
 //  AppDelegate.m
-//  MVVMTest
+//  AutoGenerateMode
 //
 //  Created by Jacky on 16/11/5.
 //  Copyright © 2016年 jacky. All rights reserved.
 //
 
-#import "SHAppDelegate.h"
-#import "MainVC.h"
+#import "AppDelegate.h"
 
-@interface SHAppDelegate ()
+@interface AppDelegate ()
 
 @end
 
-@implementation SHAppDelegate
+@implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    self.window = [[UIWindow alloc]initWithFrame:kScreenFrame];
-    MainVC *mainVC = [[MainVC alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:mainVC];
-    nav.navigationBar.barTintColor=[UIColor colorWithRed:0.22f green:0.50f blue:0.78f alpha:1.00f];
-    nav.navigationBar.tintColor=[UIColor whiteColor];
-    nav.navigationBar.titleTextAttributes=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    nav.title = @"首页";
-    
-    self.window.rootViewController = nav;
-    [self.window makeKeyAndVisible];
-    
-    
     return YES;
 }
 
