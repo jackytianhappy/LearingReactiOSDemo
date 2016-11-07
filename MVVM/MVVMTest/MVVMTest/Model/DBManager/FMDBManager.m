@@ -59,6 +59,7 @@ static NSString *update_versionInfo = @"update t_versionInfo set version = ?";
                 SHLog(@"数据库创建失败了");
             }else{
                 BOOL  success = [db executeUpdate:@"ALTER TABLE t_student ADD COLUMN papap varchar(100)"];
+                SHLog(@"%d",success);
             }
             [FMDBManager setDBInfoVersionValueWithString:[NSString stringWithFormat:@"%d",dbVersion+1]];
         }

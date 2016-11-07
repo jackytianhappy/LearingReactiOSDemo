@@ -13,7 +13,8 @@
 +(NSArray *)getAllCreateTableSqlInTheArray{
     return  @[
              @"create table if not exists t_versionInfo (version text)",//创建版本表 重要
-             @"CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY, name text NOT NULL, age integer NOT NULL,sex vachar(100),email varchar(100));"//穿件demo 表
+             @"insert into t_versionInfo(version) values(2)",//更新版本库的时候插入对应的版本号 请修改
+             @"CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY, name text NOT NULL, age integer NOT NULL,sex vachar(100),email varchar(100));"//创建demo 表
              
              ];
 }
