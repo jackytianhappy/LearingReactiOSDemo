@@ -50,11 +50,11 @@ static NSString *update_versionInfo = @"update t_versionInfo set version = ?";
     switch (dbVersion) {
         case 1:{//第一次安装 版本1.0
             //插入版本号码
-            [FMDBManager setDBInfoVersionValueWithString:[NSString stringWithFormat:@"%d",dbVersion+1]];
+            [FMDBManager setDBInfoVersionValueWithString:[NSString stringWithFormat:@"%d",(dbVersion+1)]];
         }
         case 2:{
             [self createSecondTables];
-            [FMDBManager setDBInfoVersionValueWithString:[NSString stringWithFormat:@"%d",dbVersion+1]];
+            [FMDBManager setDBInfoVersionValueWithString:[NSString stringWithFormat:@"%d",(dbVersion+1)]];
         }
             
         default:
