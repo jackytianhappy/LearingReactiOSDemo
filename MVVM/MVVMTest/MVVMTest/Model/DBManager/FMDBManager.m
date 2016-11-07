@@ -10,7 +10,6 @@
 #import "FMDBCreateTableSqlSet.h"
 
 static NSString *select_versionInfo = @"select version from t_versionInfo";
-static NSString *insert_versionInfo = @"insert into t_versionInfo(version) values(?)";
 static NSString *update_versionInfo = @"update t_versionInfo set version = ?";
 
 @implementation FMDBManager
@@ -97,23 +96,14 @@ static NSString *update_versionInfo = @"update t_versionInfo set version = ?";
 
 
 +(BOOL)setDBInfoVersionValueWithString:(NSString *)versionStr{
-    if ([FMDBManager getDBVersionInfo]) {
-        //更新版本
-        [FMDBManager updateVersionInfoWithString:versionStr];
-    }else{
-        //插入版本
-        [FMDBManager insertVersionInfoWithString:versionStr];
-    }
+    
+    [FMDBManager updateVersionInfoWithString:versionStr];
     
     return YES;
 }
 
 +(BOOL)updateVersionInfoWithString:(NSString *)versionStr{
     return [[FMDBManager sharedDatabase] executeUpdate:update_versionInfo,versionStr];
-}
-
-+(BOOL)insertVersionInfoWithString:(NSString *)versionStr{
-    return [[FMDBManager sharedDatabase] executeUpdate:insert_versionInfo,versionStr];
 }
 
 +(void)createVersionTables{
