@@ -9,6 +9,7 @@
 #import "MainVC.h"
 #import "MainTableViewDataSource.h"
 #import "MainTableViewDelegate.h"
+#import "MJRefresh.h"
 
 @interface MainVC (){
     MainTableViewDataSource *tableViewDataSource;
@@ -42,9 +43,13 @@
 -(void)initUI{
     tableViewDataSource.dataSourceArr = [[NSArray alloc]initWithObjects:@"123",@"234",@"1234", nil];
     
+    self.tableview.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    
     self.tableview.dataSource = tableViewDataSource;
     self.tableview.delegate = tableViewDelegate;
     self.tableview.rowHeight = 44;
+    
+    
 }
 
 #pragma mark -UIAction
@@ -53,7 +58,12 @@
         NSLog(@"输出现在的rowIndex：%ld",(long)indexPath.row);
         NSLog(@"name:%@",name);
     };
+}
 
+#pragma mark -talblview refresh
+-(void)refresh{
+    NSLog(@"开始刷新");
+    [self.tableview.mj_header endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {
