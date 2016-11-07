@@ -17,6 +17,7 @@
 //返回数据库路径
 +(NSString *)getDBPath;
 
+//放置在appdelegate中 用于一开始初始化
 +(void)initDBWithTheVersion;
 
 @end

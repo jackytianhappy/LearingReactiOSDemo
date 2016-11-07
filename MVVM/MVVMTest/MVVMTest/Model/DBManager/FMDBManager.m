@@ -42,11 +42,10 @@ static NSString *update_versionInfo = @"update t_versionInfo set version = ?";
         }
         
         //建立所有的表
-        [FMDBManager createAllTables];
-        
-    }else{//存在数据库 根据版本库进行操作
-        dbVersion = [[FMDBManager getDBVersionInfo] intValue];
+        [FMDBManager createAllTables]; //这个操作会建立version表
     }
+    
+    dbVersion = [[FMDBManager getDBVersionInfo] intValue];
     
     switch (dbVersion) {
         case 1:{//第一次安装 版本1.0
