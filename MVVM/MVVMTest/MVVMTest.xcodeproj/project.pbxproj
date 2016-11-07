@@ -19,6 +19,7 @@
 		85DC0D101DCDE2BF0044EA0D /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D0F1DCDE2BF0044EA0D /* MainViewCell.m */; };
 		85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D131DCDE82C0044EA0D /* MainCellModel.m */; };
 		85DC0D5C1DD0140B0044EA0D /* MainTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D5B1DD0140B0044EA0D /* MainTableViewDataSource.m */; };
+		85DC0D5F1DD018470044EA0D /* MainTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D5E1DD018470044EA0D /* MainTableViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		85DC0D131DCDE82C0044EA0D /* MainCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCellModel.m; sourceTree = "<group>"; };
 		85DC0D5A1DD0140B0044EA0D /* MainTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewDataSource.h; sourceTree = "<group>"; };
 		85DC0D5B1DD0140B0044EA0D /* MainTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewDataSource.m; sourceTree = "<group>"; };
+		85DC0D5D1DD018470044EA0D /* MainTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewDelegate.h; sourceTree = "<group>"; };
+		85DC0D5E1DD018470044EA0D /* MainTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 			children = (
 				85DC0D5A1DD0140B0044EA0D /* MainTableViewDataSource.h */,
 				85DC0D5B1DD0140B0044EA0D /* MainTableViewDataSource.m */,
+				85DC0D5D1DD018470044EA0D /* MainTableViewDelegate.h */,
+				85DC0D5E1DD018470044EA0D /* MainTableViewDelegate.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				85C552B61DCDC88B00D7FF6C /* main.m in Sources */,
 				85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */,
 				85C552ED1DCDD8D300D7FF6C /* MainVC.m in Sources */,
+				85DC0D5F1DD018470044EA0D /* MainTableViewDelegate.m in Sources */,
 				85DC0D101DCDE2BF0044EA0D /* MainViewCell.m in Sources */,
 				85C552EA1DCDD8B000D7FF6C /* BaseVC.m in Sources */,
 			);

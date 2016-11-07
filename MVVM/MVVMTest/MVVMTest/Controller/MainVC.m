@@ -8,9 +8,11 @@
 
 #import "MainVC.h"
 #import "MainTableViewDataSource.h"
+#import "MainTableViewDelegate.h"
 
 @interface MainVC (){
-    MainTableViewDataSource *dataSource;
+    MainTableViewDataSource *tableViewDataSource;
+    MainTableViewDelegate   *tableViewDelegate;
 }
 
 @property (nonatomic,strong) UITableView *tableview;
@@ -22,21 +24,37 @@
 #pragma mark -VC life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dataSource = [[MainTableViewDataSource alloc]init];
-    
+    [self initData];
     
     [self initUI];
+    
+    [self initUIAction];
 }
 
+#pragma mark -Init Data
+#pragma mark -Data
+-(void)initData{
+    tableViewDataSource = [[MainTableViewDataSource alloc]init];
+    tableViewDelegate = [[MainTableViewDelegate alloc]init];
+}
 
 #pragma mark -UI
 -(void)initUI{
-    dataSource.dataSourceArr = [[NSArray alloc]initWithObjects:@"123",@"234",@"1234", nil];
+    tableViewDataSource.dataSourceArr = [[NSArray alloc]initWithObjects:@"123",@"234",@"1234", nil];
     
-    self.tableview.dataSource = dataSource;
+    self.tableview.dataSource = tableViewDataSource;
+    self.tableview.delegate = tableViewDelegate;
     self.tableview.rowHeight = 44;
 }
 
+#pragma mark -UIAction
+-(void)initUIAction{
+    tableViewDelegate.mainCellSelectAction = ^(NSIndexPath *indexPath,NSString *name){
+        NSLog(@"输出现在的rowIndex：%ld",(long)indexPath.row);
+        NSLog(@"name:%@",name);
+    };
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

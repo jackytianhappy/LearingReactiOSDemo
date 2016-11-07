@@ -20,7 +20,7 @@
 -(instancetype)initWithMainCellMode:(MainCellModel *)mainCellModel{
     if (self = [super init]) {
         self.showLbl.text = mainCellModel.title;
-        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
