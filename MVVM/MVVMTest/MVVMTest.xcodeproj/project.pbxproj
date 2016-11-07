@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6CF9ADF3B4E53E9FD7DEDD73 /* libPods-MVVMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 199DE8E7D8EC32DD7341E727 /* libPods-MVVMTest.a */; };
+		858456821DD0282E00CEB07A /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 858456811DD0282E00CEB07A /* FMDBManager.m */; };
+		858456851DD06AD100CEB07A /* FMDBCreateTableSqlSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 858456841DD06AD100CEB07A /* FMDBCreateTableSqlSet.m */; };
 		85C552B61DCDC88B00D7FF6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C552B51DCDC88B00D7FF6C /* main.m */; };
 		85C552B91DCDC88B00D7FF6C /* SHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C552B81DCDC88B00D7FF6C /* SHAppDelegate.m */; };
 		85C552C11DCDC88B00D7FF6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85C552C01DCDC88B00D7FF6C /* Assets.xcassets */; };
@@ -43,6 +45,10 @@
 		199DE8E7D8EC32DD7341E727 /* libPods-MVVMTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6C2AC7BD1768917682F767 /* Pods-MVVMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTest/Pods-MVVMTest.release.xcconfig"; sourceTree = "<group>"; };
 		736249D855DFB87CE34710A2 /* Pods-MVVMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMTest/Pods-MVVMTest.debug.xcconfig"; sourceTree = "<group>"; };
+		858456801DD0282E00CEB07A /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		858456811DD0282E00CEB07A /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
+		858456831DD06AD100CEB07A /* FMDBCreateTableSqlSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBCreateTableSqlSet.h; sourceTree = "<group>"; };
+		858456841DD06AD100CEB07A /* FMDBCreateTableSqlSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBCreateTableSqlSet.m; sourceTree = "<group>"; };
 		85C552B11DCDC88B00D7FF6C /* MVVMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C552B51DCDC88B00D7FF6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85C552B71DCDC88B00D7FF6C /* SHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +118,17 @@
 				4D6C2AC7BD1768917682F767 /* Pods-MVVMTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8584567F1DD027AC00CEB07A /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				858456801DD0282E00CEB07A /* FMDBManager.h */,
+				858456811DD0282E00CEB07A /* FMDBManager.m */,
+				858456831DD06AD100CEB07A /* FMDBCreateTableSqlSet.h */,
+				858456841DD06AD100CEB07A /* FMDBCreateTableSqlSet.m */,
+			);
+			path = DBManager;
 			sourceTree = "<group>";
 		};
 		85C552A81DCDC88B00D7FF6C = {
@@ -222,6 +239,7 @@
 		85DC0D111DCDE8040044EA0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8584567F1DD027AC00CEB07A /* DBManager */,
 				85DC0D121DCDE82C0044EA0D /* MainCellModel.h */,
 				85DC0D131DCDE82C0044EA0D /* MainCellModel.m */,
 			);
@@ -418,7 +436,9 @@
 				85DC0D5C1DD0140B0044EA0D /* MainTableViewDataSource.m in Sources */,
 				85C552B61DCDC88B00D7FF6C /* main.m in Sources */,
 				85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */,
+				858456851DD06AD100CEB07A /* FMDBCreateTableSqlSet.m in Sources */,
 				85C552ED1DCDD8D300D7FF6C /* MainVC.m in Sources */,
+				858456821DD0282E00CEB07A /* FMDBManager.m in Sources */,
 				85DC0D5F1DD018470044EA0D /* MainTableViewDelegate.m in Sources */,
 				85DC0D101DCDE2BF0044EA0D /* MainViewCell.m in Sources */,
 				85C552EA1DCDD8B000D7FF6C /* BaseVC.m in Sources */,

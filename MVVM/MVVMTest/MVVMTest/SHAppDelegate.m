@@ -8,6 +8,7 @@
 
 #import "SHAppDelegate.h"
 #import "MainVC.h"
+#import "FMDBManager.h"
 
 @interface SHAppDelegate ()
 
@@ -18,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //make the database to be initial
+    [FMDBManager initDBWithTheVersion];
     
     self.window = [[UIWindow alloc]initWithFrame:kScreenFrame];
     MainVC *mainVC = [[MainVC alloc]init];

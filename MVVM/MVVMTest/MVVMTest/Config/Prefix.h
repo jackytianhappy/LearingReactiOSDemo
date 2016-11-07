@@ -13,5 +13,12 @@
 #define kScreenSize  [UIScreen mainScreen].bounds.size
 
 
+#ifdef DEBUG
+#define SHLog(format, ...) NSLog(format, ## __VA_ARGS__)
+#else
+#define SHLog(format, ...)
+#endif
+
+
 
 #endif /* Prefix_h */

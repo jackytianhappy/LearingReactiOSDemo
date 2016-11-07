@@ -10,6 +10,7 @@
 #import "MainTableViewDataSource.h"
 #import "MainTableViewDelegate.h"
 #import "MJRefresh.h"
+#import "FMDBManager.h"
 
 @interface MainVC (){
     MainTableViewDataSource *tableViewDataSource;
@@ -25,15 +26,26 @@
 #pragma mark -VC life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self initData];
+    [self initDataBase];
     
     [self initUI];
     
     [self initUIAction];
+    
+    
+}
+
+#pragma mark -DataBase
+-(void)initDataBase{
+    FMDatabase *db = [FMDBManager sharedDatabase];
+    if (![db open]) {
+        [db close];
+    }
 }
 
 #pragma mark -Init Data
-#pragma mark -Data
 -(void)initData{
     tableViewDataSource = [[MainTableViewDataSource alloc]init];
     tableViewDelegate = [[MainTableViewDelegate alloc]init];
