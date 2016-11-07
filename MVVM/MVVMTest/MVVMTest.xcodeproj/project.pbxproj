@@ -18,6 +18,7 @@
 		85C552ED1DCDD8D300D7FF6C /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C552EC1DCDD8D300D7FF6C /* MainVC.m */; };
 		85DC0D101DCDE2BF0044EA0D /* MainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D0F1DCDE2BF0044EA0D /* MainViewCell.m */; };
 		85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D131DCDE82C0044EA0D /* MainCellModel.m */; };
+		85DC0D5C1DD0140B0044EA0D /* MainTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DC0D5B1DD0140B0044EA0D /* MainTableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		85DC0D0F1DCDE2BF0044EA0D /* MainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewCell.m; sourceTree = "<group>"; };
 		85DC0D121DCDE82C0044EA0D /* MainCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCellModel.h; sourceTree = "<group>"; };
 		85DC0D131DCDE82C0044EA0D /* MainCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCellModel.m; sourceTree = "<group>"; };
+		85DC0D5A1DD0140B0044EA0D /* MainTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewDataSource.h; sourceTree = "<group>"; };
+		85DC0D5B1DD0140B0044EA0D /* MainTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 		85DC0D0C1DCDDD450044EA0D /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				85DC0D5A1DD0140B0044EA0D /* MainTableViewDataSource.h */,
+				85DC0D5B1DD0140B0044EA0D /* MainTableViewDataSource.m */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85C552B91DCDC88B00D7FF6C /* SHAppDelegate.m in Sources */,
+				85DC0D5C1DD0140B0044EA0D /* MainTableViewDataSource.m in Sources */,
 				85C552B61DCDC88B00D7FF6C /* main.m in Sources */,
 				85DC0D141DCDE82C0044EA0D /* MainCellModel.m in Sources */,
 				85C552ED1DCDD8D300D7FF6C /* MainVC.m in Sources */,

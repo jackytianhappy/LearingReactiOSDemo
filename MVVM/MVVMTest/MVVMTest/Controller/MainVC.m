@@ -7,8 +7,10 @@
 //
 
 #import "MainVC.h"
+#import "MainTableViewDataSource.h"
+
 @interface MainVC (){
-    
+    MainTableViewDataSource *dataSource;
 }
 
 @property (nonatomic,strong) UITableView *tableview;
@@ -20,6 +22,8 @@
 #pragma mark -VC life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    dataSource = [[MainTableViewDataSource alloc]init];
+    
     
     [self initUI];
 }
@@ -27,7 +31,10 @@
 
 #pragma mark -UI
 -(void)initUI{
+    dataSource.dataSourceArr = [[NSArray alloc]initWithObjects:@"123",@"234",@"1234", nil];
     
+    self.tableview.dataSource = dataSource;
+    self.tableview.rowHeight = 44;
 }
 
 

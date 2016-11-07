@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MainCellModel;
 
 @interface MainViewCell : UITableViewCell
 
--(instancetype)initWithMod
+-(instancetype)initWithMainCellMode:(MainCellModel *)mainCellModel;
 
 @end
