@@ -11,6 +11,7 @@
 #import "view2.h"
 #import "HittestBtn.h"
 #import "TabbarBtn.h"
+#import "ViewControllerOne.h"
 
 @interface ViewController ()
 
@@ -20,6 +21,8 @@
 @property (nonatomic,strong) HittestBtn *hitTestBtn;
 
 @property (nonatomic,strong) TabbarBtn *tabbarBtn;
+
+@property (nonatomic,strong) UIScrollView *myscrollview;
 
 @end
 
@@ -47,9 +50,24 @@
     [self.view addSubview:self.hitTestBtn];
     
     [self makeBottomBar];
+    
+
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self makeTheScrollView]; //scrollview留边
+}
+
+#pragma mark -scrollview 留边
+-(void)makeTheScrollView{
+    ViewControllerOne *viewOne = [[ViewControllerOne alloc]init];
+    [self.navigationController presentViewController:viewOne animated:YES completion:nil];
+    [self presentViewController:viewOne animated:YES completion:nil];
 }
 
 
+#pragma mark -不在父view中的按钮也能够响应
 -(void)makeBottomBar{
     self.tabbarBtn.liveListClick = ^(){
         NSLog(@"第1个");
@@ -64,6 +82,7 @@
     };
 }
 
+#pragma marl -扩大热区
 -(void)hitAction{
     NSLog(@"在热区");
 }
