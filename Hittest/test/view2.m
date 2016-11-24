@@ -28,7 +28,7 @@
     NSLog(@"B_view--- pointInside withEvent ---");
     BOOL isInside = [super pointInside:point withEvent:event];
     NSLog(@"B_view--- pointInside withEvent --- isInside:%d",isInside);
-    return isInside;
+    return YES;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

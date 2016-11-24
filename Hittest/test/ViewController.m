@@ -44,12 +44,13 @@
     [self.view addSubview:self.view1];
     [self.view addSubview:self.view2];
     
+    //扩大view的区域
     self.hitTestBtn = [[HittestBtn alloc]initWithFrame:CGRectMake(100, 350, 100, 100)];
     [self.hitTestBtn setBackgroundColor:[UIColor yellowColor]];
     [self.hitTestBtn addTarget:self action:@selector(hitAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.hitTestBtn];
     
-    [self makeBottomBar];
+    //[self makeBottomBar];
     
 
 

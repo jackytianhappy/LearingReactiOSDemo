@@ -20,7 +20,7 @@
 
 //in every view .m overide those methods
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    NSLog(@"进入A_View---hitTest withEvent ---");
+    NSLog(@"进入A_View--- hitTest withEvent ---");
     UIView * view = [super hitTest:point withEvent:event];
     NSLog(@"离开A_View--- hitTest withEvent ---hitTestView:%@",view);
     return view;
