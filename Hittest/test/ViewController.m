@@ -34,6 +34,7 @@
     
     self.view1 = [[view1 alloc]initWithFrame:self.view.frame];
     
+    
     //[self.view1 addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewOneAction)]];
     
     self.view2 = [[view2 alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
@@ -45,10 +46,10 @@
     [self.view addSubview:self.view2];
     
     //扩大view的区域
-    self.hitTestBtn = [[HittestBtn alloc]initWithFrame:CGRectMake(100, 350, 100, 100)];
-    [self.hitTestBtn setBackgroundColor:[UIColor yellowColor]];
-    [self.hitTestBtn addTarget:self action:@selector(hitAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.hitTestBtn];
+//    self.hitTestBtn = [[HittestBtn alloc]initWithFrame:CGRectMake(100, 350, 100, 100)];
+//    [self.hitTestBtn setBackgroundColor:[UIColor yellowColor]];
+//    [self.hitTestBtn addTarget:self action:@selector(hitAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:self.hitTestBtn];
     
     //[self makeBottomBar];
     
@@ -57,7 +58,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self makeTheScrollView]; //scrollview留边
+    //[self makeTheScrollView]; //scrollview留边
 }
 
 #pragma mark -scrollview 留边
