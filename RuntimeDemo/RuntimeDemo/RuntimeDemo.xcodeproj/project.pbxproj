@@ -15,6 +15,7 @@
 		85AF2EDF1DF6A3FC00FDFB61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AF2EDD1DF6A3FC00FDFB61 /* LaunchScreen.storyboard */; };
 		85AF2EEA1DF6A3FC00FDFB61 /* RuntimeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AF2EE91DF6A3FC00FDFB61 /* RuntimeDemoTests.m */; };
 		85AF2EF51DF6A3FC00FDFB61 /* RuntimeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AF2EF41DF6A3FC00FDFB61 /* RuntimeDemoUITests.m */; };
+		85AF2F041DF6B7FE00FDFB61 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AF2F031DF6B7FE00FDFB61 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		85AF2EF01DF6A3FC00FDFB61 /* RuntimeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AF2EF41DF6A3FC00FDFB61 /* RuntimeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoUITests.m; sourceTree = "<group>"; };
 		85AF2EF61DF6A3FC00FDFB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85AF2F021DF6B7FE00FDFB61 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		85AF2F031DF6B7FE00FDFB61 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				85AF2EDD1DF6A3FC00FDFB61 /* LaunchScreen.storyboard */,
 				85AF2EE01DF6A3FC00FDFB61 /* Info.plist */,
 				85AF2ECF1DF6A3FC00FDFB61 /* Supporting Files */,
+				85AF2F021DF6B7FE00FDFB61 /* Person.h */,
+				85AF2F031DF6B7FE00FDFB61 /* Person.m */,
 			);
 			path = RuntimeDemo;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			files = (
 				85AF2ED71DF6A3FC00FDFB61 /* ViewController.m in Sources */,
 				85AF2ED41DF6A3FC00FDFB61 /* AppDelegate.m in Sources */,
+				85AF2F041DF6B7FE00FDFB61 /* Person.m in Sources */,
 				85AF2ED11DF6A3FC00FDFB61 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

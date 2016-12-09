@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
+
+void (*setter)(id,SEL,BOOL);
+
 
 @interface ViewController ()
 
@@ -14,9 +18,19 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    Person *person = [[Person alloc]init];
+    
+}
+
+-(void)test{
+
 }
 
 
@@ -24,6 +38,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end
