@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseVC : UIViewController{
+@interface BaseVC : UIViewController<UIAlertViewDelegate>{
     NSString *memberOneInH;
     
     int numInH;
@@ -17,5 +17,9 @@
 
 @property (nonatomic,strong) NSString *nameOneInH;
 
+@property (nonatomic,strong) UIAlertView *myAlertView;
+
+- (void)doSomething;
+- (void)doSomethingOne;
 
 @end

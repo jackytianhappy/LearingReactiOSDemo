@@ -14,6 +14,7 @@
 
 @property (nonatomic,strong) NSString *nameOneInM;
 
+
 @end
 
 @implementation BaseVC
@@ -34,6 +35,27 @@
     
     memberOneInM = @"成员变量在内部";
     self.nameOneInM = @"name在内部";
+    
+    
+}
+
+- (void)doSomething{
+    NSLog(@"在这里进行自定义操作");
+}
+
+- (void)doSomethingOne{
+    NSLog(@"在这里进行自定义操作11111");
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView == self.myAlertView) {
+        if (buttonIndex == 0) {
+            NSLog(@"fuck");
+        }else{
+            NSLog(@"safsadf");
+        }
+    }
 }
 
 

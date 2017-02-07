@@ -24,8 +24,16 @@
     NSLog(@"%d",isRight);
     NSLog(@"%@",memberOneInH);
     NSLog(@"%@",self.nameOneInH);
+ 
+    [self doSomething];
+    [self doSomethingOne];
+    
+    self.myAlertView = [[UIAlertView alloc]initWithTitle:@"测试数据" message:@"1234567890" delegate:self cancelButtonTitle:@"确认" otherButtonTitles:@"取消", nil];
+    [self.myAlertView show];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
