@@ -33,17 +33,15 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view1 = [[view1 alloc]initWithFrame:self.view.frame];
-    
-    
-    //[self.view1 addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewOneAction)]];
+    self.view1.backgroundColor = [UIColor yellowColor];
+    [self.view1 addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewOneAction)]];
     
     self.view2 = [[view2 alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     self.view2.backgroundColor =[UIColor redColor];
-    
-    //[self.view2 addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTwoAction)]];
+    [self.view2 addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTwoAction)]];
     
     [self.view addSubview:self.view1];
-    [self.view addSubview:self.view2];
+    [self.view1 addSubview:self.view2];
     
     //扩大view的区域
 //    self.hitTestBtn = [[HittestBtn alloc]initWithFrame:CGRectMake(100, 350, 100, 100)];
