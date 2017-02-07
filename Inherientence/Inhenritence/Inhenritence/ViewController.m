@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SubOneVC.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToAnotherOne)]];
+    
+}
+
+- (void)jumpToAnotherOne{
+    SubOneVC *subOne = [[SubOneVC alloc]init];
+    
+    [self presentViewController:subOne animated:YES completion:nil];
 }
 
 

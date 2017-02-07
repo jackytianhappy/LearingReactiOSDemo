@@ -13,6 +13,8 @@
 		85E859521E49A8B5004B9DDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E859501E49A8B5004B9DDD /* Main.storyboard */; };
 		85E859541E49A8B5004B9DDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E859531E49A8B5004B9DDD /* Assets.xcassets */; };
 		85E859571E49A8B5004B9DDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E859551E49A8B5004B9DDD /* LaunchScreen.storyboard */; };
+		85E859611E49A998004B9DDD /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E859601E49A998004B9DDD /* BaseVC.m */; };
+		85E859641E49A9B8004B9DDD /* SubOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E859631E49A9B8004B9DDD /* SubOneVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		85E859531E49A8B5004B9DDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E859561E49A8B5004B9DDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85E859581E49A8B5004B9DDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E8595F1E49A998004B9DDD /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		85E859601E49A998004B9DDD /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		85E859621E49A9B8004B9DDD /* SubOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubOneVC.h; sourceTree = "<group>"; };
+		85E859631E49A9B8004B9DDD /* SubOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubOneVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,7 @@
 		85E859461E49A8B5004B9DDD /* Inhenritence */ = {
 			isa = PBXGroup;
 			children = (
-				85E8595E1E49A8D1004B9DDD /* New Group */,
+				85E8595E1E49A8D1004B9DDD /* demo */,
 				85E8594A1E49A8B5004B9DDD /* AppDelegate.h */,
 				85E8594B1E49A8B5004B9DDD /* AppDelegate.m */,
 				85E8594D1E49A8B5004B9DDD /* ViewController.h */,
@@ -80,11 +86,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		85E8595E1E49A8D1004B9DDD /* New Group */ = {
+		85E8595E1E49A8D1004B9DDD /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				85E8595F1E49A998004B9DDD /* BaseVC.h */,
+				85E859601E49A998004B9DDD /* BaseVC.m */,
+				85E859621E49A9B8004B9DDD /* SubOneVC.h */,
+				85E859631E49A9B8004B9DDD /* SubOneVC.m */,
 			);
-			name = "New Group";
+			name = demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				85E8594F1E49A8B5004B9DDD /* ViewController.m in Sources */,
+				85E859641E49A9B8004B9DDD /* SubOneVC.m in Sources */,
 				85E8594C1E49A8B5004B9DDD /* AppDelegate.m in Sources */,
 				85E859491E49A8B5004B9DDD /* main.m in Sources */,
+				85E859611E49A998004B9DDD /* BaseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +330,7 @@
 				85E8595D1E49A8B5004B9DDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
