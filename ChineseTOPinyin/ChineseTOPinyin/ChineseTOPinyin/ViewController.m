@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController (){
+    UIImageView *image;
+}
 @end
 
 @implementation ViewController
@@ -17,11 +18,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     NSString *chineseName = @"北京";
     NSLog(@"%@",[[self chineseTransformToPinyin:chineseName] stringByReplacingOccurrencesOfString:@" " withString:@""]);
     
     NSString *name = @"bei jing";
     NSLog(@"%@",[name stringByReplacingOccurrencesOfString:@" " withString:@""]);
+    
+    image = [[UIImageView alloc]init];
+    image.frame = CGRectMake(50, 50, 200, 20);
+    image.image = [UIImage imageNamed:@"460"];
+    [self.view addSubview:image];
+    
+//    CGAffineTransform transform= CGAffineTransformMakeRotation(M_PI);
+//    image.transform = transform;//旋转
+    
+    
+    
+ 
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(rotation)]];
+    
+}
+
+- (void)rotation{
+    
 }
 
 
