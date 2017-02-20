@@ -41,7 +41,7 @@
     [self.view2 addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewTwoAction)]];
     
     [self.view addSubview:self.view1];
-    [self.view1 addSubview:self.view2];
+    [self.view addSubview:self.view2];
     
     //扩大view的区域
 //    self.hitTestBtn = [[HittestBtn alloc]initWithFrame:CGRectMake(100, 350, 100, 100)];
