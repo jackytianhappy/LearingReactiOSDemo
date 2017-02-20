@@ -51,9 +51,37 @@
     
     //[self makeBottomBar];
     
-
+    
+    
+    //以下解释点击区域覆盖问题
+//    UIView *view  = [[UIView alloc]initWithFrame:CGRectMake(0, 200, 200, 100)];
+//    [self.view addSubview:view];
+//    view.backgroundColor = [UIColor purpleColor];
+//    [view addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(ClipFather)]];
+//    
+//    
+////    UIView *viewadf  = [[UIView alloc]initWithFrame:CGRectMake(0, 200, 200, 50)];
+////    [self.view addSubview:viewadf];
+////    viewadf.backgroundColor = [UIColor blueColor];
+////    [viewadf addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Clip)]];
+//    
+//    
+//    UIView *viewadf  = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
+//    [view addSubview:viewadf];
+//    viewadf.backgroundColor = [UIColor blueColor];
+//    [viewadf addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Clip)]];
 
 }
+
+
+- (void)ClipFather{
+    NSLog(@"点击了大的");
+}
+
+- (void)Clip{
+    NSLog(@"点击了小的");
+}
+
 
 -(void)viewDidAppear:(BOOL)animated{
     //[self makeTheScrollView]; //scrollview留边
