@@ -14,6 +14,7 @@
 		855A26E31EB5874300D59786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855A26E21EB5874300D59786 /* Assets.xcassets */; };
 		855A26E61EB5874300D59786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855A26E41EB5874300D59786 /* LaunchScreen.storyboard */; };
 		855A26F11EB587B900D59786 /* MRCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855A26F01EB587B900D59786 /* MRCVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		855A26F41EB5D0A100D59786 /* ARCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 855A26F31EB5D0A100D59786 /* ARCVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		855A26E71EB5874300D59786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855A26EF1EB587B900D59786 /* MRCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCVC.h; sourceTree = "<group>"; };
 		855A26F01EB587B900D59786 /* MRCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCVC.m; sourceTree = "<group>"; };
+		855A26F21EB5D0A100D59786 /* ARCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCVC.h; sourceTree = "<group>"; };
+		855A26F31EB5D0A100D59786 /* ARCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 		855A26EE1EB5878100D59786 /* ARC */ = {
 			isa = PBXGroup;
 			children = (
+				855A26F21EB5D0A100D59786 /* ARCVC.h */,
+				855A26F31EB5D0A100D59786 /* ARCVC.m */,
 			);
 			name = ARC;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			files = (
 				855A26DE1EB5874300D59786 /* ViewController.m in Sources */,
 				855A26F11EB587B900D59786 /* MRCVC.m in Sources */,
+				855A26F41EB5D0A100D59786 /* ARCVC.m in Sources */,
 				855A26DB1EB5874300D59786 /* AppDelegate.m in Sources */,
 				855A26D81EB5874300D59786 /* main.m in Sources */,
 			);

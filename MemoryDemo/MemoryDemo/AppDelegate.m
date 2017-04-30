@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MRCVC.h"
+#import "ARCVC.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,8 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     
-    MRCVC *VC =  [MRCVC new];
+    //MRCVC *VC =  [MRCVC new];
+    ARCVC *VC = [ARCVC new];
     
     self.window.rootViewController = VC;
     [self.window makeKeyAndVisible];
