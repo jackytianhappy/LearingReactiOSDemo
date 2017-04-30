@@ -26,6 +26,18 @@ __weak id reference = nil;
     // str是一个autorelease对象，设置一个weak的引用来观察它
     reference = str;
     
+    
+//    进行手动干预
+//    @autoreleasepool {
+//        //Attention 这里的字符串要尽量的长 你可以把她换成jacky试试看，原因是因为苹果引入了TaggedPoiner来节省内存
+//        NSString *str = [NSString stringWithFormat:@"safsadfsdfsfsafsfsafsdfsdfdsfsfsfsdfs"];
+//        
+//        // str是一个autorelease对象，设置一个weak的引用来观察它
+//        reference = str;
+//
+//    }
+    
+    
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
